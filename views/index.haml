@@ -5,3 +5,12 @@
   %marquee{ direction: 'right' }
     %h1.p-3 Hello World!
     %img{ src: './images/nyan-cat.gif' }
+
+.container
+  %h3 Hello, I'm #{@pokemon["name"]}
+  %h5 How are you?
+  %p Today is the #{@time}! What have you been up to?
+  %a(href="#{@pokemon["url"]}") Here 
+  you can learn more about me 😎
+
+%img(src='https://img.pokemondb.net/artwork/large/#{@name}.jpg')
