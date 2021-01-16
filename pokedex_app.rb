@@ -8,7 +8,7 @@ class PokedexApp < Sinatra::Application
     uri = URI(url)
     req = Net::HTTP.get(uri)
     pokemons = JSON.parse(req)
-    index = rand(1..10)
+    index = rand(0..9)
     
     @pokemon = pokemons["results"][index]
     @name = @pokemon["name"]
