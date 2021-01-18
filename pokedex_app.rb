@@ -9,6 +9,8 @@ class PokedexApp < Sinatra::Application
     req = Net::HTTP.get(uri)
     pokemons = JSON.parse(req)
     index = rand(-150..-1)
+
+    return display_page :index unless !!pokemons
     
     @pokemon = pokemons["results"][index]
     @time = Date.today.strftime("%d %b %Y")

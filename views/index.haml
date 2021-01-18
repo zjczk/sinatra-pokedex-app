@@ -1,17 +1,18 @@
--# #index.container.my-5.p-3
-  %h1.p-3 Welcome to the Finiata Pokedex!
+- if @pokemon
+  .pokemon-card
+    .pic
+      %img(src='https://img.pokemondb.net/artwork/large/#{@pokemon["name"]}.jpg')
+    .message
+      %h3 Hello, I'm #{@pokemon["name"].upcase}
+      %h5 How are you?
+      %p Today is the #{@time}! What have you been up to?
+      %a(href="#{@pokemon["url"]}") Here 
+      %span you can learn more about me 😎
+- else
+  #index.container.my-5.p-3
+    %h1.p-3 Welcome to the Finiata Pokedex!
 
--# #index.container.my-5.p-3
-  %marquee{ direction: 'right' }
-    %h1.p-3 Hello World!
-    %img{ src: './images/nyan-cat.gif' }
-
-.pokemon-card
-  .pic
-    %img(src='https://img.pokemondb.net/artwork/large/#{@pokemon["name"]}.jpg')
-  .message
-    %h3 Hello, I'm #{@pokemon["name"].upcase}
-    %h5 How are you?
-    %p Today is the #{@time}! What have you been up to?
-    %a(href="#{@pokemon["url"]}") Here 
-    %span you can learn more about me 😎
+  #index.container.my-5.p-3
+    %marquee{ direction: 'right' }
+      %h1.p-3 Hello World!
+      %img{ src: './images/nyan-cat.gif' }
