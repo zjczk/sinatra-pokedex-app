@@ -1,11 +1,32 @@
-html, body {
-  margin, padding: 0;
+.pokemon-card {
+  max-width: max-content;
+  display: flex;
+  flex-direction:column;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #393e46;
+  font-weight: bold;
+  border-radius: 30px;
+  color: #ffd369;
+  font-family: sans-serif;
 }
 
-.hidden {
-  display: none;
+.pic {
+  overflow: hidden;
+  border-radius: 50% 20% / 10% 40%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4px;
 }
 
-.cursor-pointer {
-  cursor: pointer;
+img {
+  width: 250px;
+}
+
+.message {
+  text-align:center;
+  margin: 1.25rem;
 }
